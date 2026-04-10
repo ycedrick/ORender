@@ -1,12 +1,12 @@
 import { useTheme } from '@/hooks/use-theme';
 import React from 'react';
 import {
-  ScrollView,
   StyleSheet,
   View,
   ViewProps,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { Edge, SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export interface ScreenProps extends ViewProps {
@@ -43,7 +43,7 @@ export const Screen: React.FC<ScreenProps> = ({
   const insets = useSafeAreaInsets();
 
   const Container = safeArea ? SafeAreaView : View;
-  const Wrapper = scroll ? ScrollView : View;
+  const Wrapper = scroll ? KeyboardAwareScrollView : View;
 
   const resolvedBgColor = backgroundColor || theme.colors.background;
 
@@ -71,6 +71,7 @@ export const Screen: React.FC<ScreenProps> = ({
         contentContainerStyle={scroll ? innerStyle : undefined}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
+        {...scroll && { bottomOffset: 20 }}
       >
         {!scroll ? (
           <View style={[styles.wrapper, innerStyle]}>{children}</View>
