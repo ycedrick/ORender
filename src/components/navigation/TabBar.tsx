@@ -35,7 +35,7 @@ export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
       {
         backgroundColor: theme.colors.background,
         borderTopColor: theme.colors.border.subtle,
-        paddingBottom: Math.max(insets.bottom, 70),
+        paddingBottom: insets.bottom + 32,
       }
     ]}>
       {state.routes.map((route, index) => {
