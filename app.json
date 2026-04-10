@@ -59,9 +59,7 @@
       }
     },
     "owner": "caceres74113",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/9df3bc4e-6678-4938-8398-013a162c1216"
     }
