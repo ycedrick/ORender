@@ -52,7 +52,7 @@ function BootstrappedAppShell() {
   return (
     <View style={[styles.appShell, { backgroundColor: theme.colors.background }]}>
       {showGlobalBanner && activeSession && (
-        <View style={[styles.bannerOverlay, { bottom: bannerTop + insets.bottom + 24 }]}>
+        <View style={[styles.bannerOverlay, { bottom: bannerTop + insets.bottom + 42 }]}>
           <ActiveSessionBanner
             clockInTime={activeSession.clockIn}
             onStop={handleClockOut}
