@@ -1,5 +1,5 @@
-import { appConstants } from '@/config/app-constants';
 import { Card, Chip, HStack, Screen, Spacer, Text, VStack } from '@/components/ui';
+import { appConstants } from '@/config/app-constants';
 import { useTheme } from '@/hooks/use-theme';
 import React from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
@@ -31,10 +31,7 @@ export const SettingsScreen = () => {
     <Screen edges={["left", "right"]} scroll style={styles.container} contentContainerStyle={styles.content}>
       <VStack spacing="lg">
         <VStack spacing="xs">
-          <Text variant="xl" weight="bold">Settings</Text>
-          <Text color={theme.colors.text.secondary}>
-            Manage your profile, reminders, export history, and app preferences.
-          </Text>
+          <Text variant="xxl" weight="bold">Settings</Text>
         </VStack>
 
         {isLoading ? (
@@ -124,6 +121,7 @@ export const SettingsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 24,
   },
   content: {
     paddingBottom: 40,

@@ -25,10 +25,7 @@ export const ReportsScreen = () => {
     <Screen edges={["left", "right"]} scroll style={styles.container} contentContainerStyle={styles.content}>
       <VStack spacing="lg">
         <VStack spacing="xs">
-          <Text variant="xl" weight="bold">Reports</Text>
-          <Text color={theme.colors.text.secondary}>
-            Review your hours across daily, weekly, and monthly periods.
-          </Text>
+          <Text variant="xxl" weight="bold">Reports</Text>
         </VStack>
 
         <PeriodSelector selectedPeriod={selectedPeriod} onSelectPeriod={setSelectedPeriod} />
@@ -91,6 +88,7 @@ export const ReportsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 24,
   },
   content: {
     paddingBottom: 40,

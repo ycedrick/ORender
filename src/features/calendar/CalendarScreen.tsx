@@ -95,12 +95,10 @@ export const CalendarScreen = () => {
 
   return (
     <Screen edges={['left', 'right']} scroll style={styles.container} contentContainerStyle={styles.content}>
-      <VStack spacing="lg">
+      <VStack spacing="lg" >
         <VStack spacing="xs">
-          <Text variant="xl" weight="bold">Calendar</Text>
-          <Text color={theme.colors.text.secondary}>
-            Review your month at a glance with day-by-day activity markers.
-          </Text>
+          <Text variant="xxl" weight="bold">Calendar</Text>
+         
         </VStack>
 
         <HStack justify="space-between" align="center">
@@ -190,6 +188,7 @@ export const CalendarScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop:24,
   },
   content: {
     paddingBottom: 40,
